@@ -109,3 +109,4 @@ typings/
 build.log
 build
 dist
+*.alfredworkflow

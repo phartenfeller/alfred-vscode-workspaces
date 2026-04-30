@@ -1,5 +1,6 @@
 import alfy from 'alfy';
 import { fetch, getProjectFilePath, inputMatchesData } from './lib/utils.mjs';
+import getProjectsFromDirectories from './lib/directory-scanner.mjs';
 
 async function main() {
   try {
@@ -8,6 +9,18 @@ async function main() {
     // alfy.log(`[info] Using files: ${files}`);
 
     let projects = await fetch(files, {});
+
+    // Add projects from configured directories
+    const directoryProjects = getProjectsFromDirectories();
+    if (directoryProjects.length > 0) {
+      // Create a Set of existing folderUris for deduplication
+      const existingUris = new Set(projects.map((p) => p.folderUri));
+      // Add directory projects that aren't already in recent projects
+      const newProjects = directoryProjects.filter(
+        (p) => !existingUris.has(p.folderUri)
+      );
+      projects = [...projects, ...newProjects];
+    }
 
     if (alfy.input) {
       projects = inputMatchesData(projects, alfy.input, ['title', 'subtitle']);
