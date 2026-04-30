@@ -1,6 +1,6 @@
 {
   "name": "@phartenfeller/alfred-vscode-workspaces",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Alfred workflow that allows you to browse and open Visual Studio Code workspaces",
   "license": "MIT",
   "repository": "https://github.com/phartenfeller/alfred-vscode-workspaces",

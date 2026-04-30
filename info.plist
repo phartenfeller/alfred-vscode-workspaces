@@ -115,23 +115,22 @@ For furher details see https://github.com/phartenfeller/alfred-vscode-workspaces
 		<key>4DD30082-AABC-4CFA-8FC3-0738FA31C350</key>
 		<dict>
 			<key>xpos</key>
-			<integer>100</integer>
+			<real>100</real>
 			<key>ypos</key>
-			<integer>170</integer>
+			<real>170</real>
 		</dict>
 		<key>A5F42246-10C3-441B-9871-7A28FE42EEEC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>320</integer>
+			<real>325</real>
 			<key>ypos</key>
-			<integer>170</integer>
+			<real>170</real>
 		</dict>
 	</dict>
-	<key>variables</key>
-	<dict>
-	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>version</key>
-	<string>1.3.0</string>
+	<string>1.4.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/phartenfeller/alfred-vscode-workspaces</string>
 </dict>
