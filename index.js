@@ -3,11 +3,11 @@ import { fetch, getProjectFilePath, inputMatchesData } from './lib/utils.mjs';
 
 async function main() {
   try {
-    const file = getProjectFilePath();
-    // console.log(`[info] Using file: ${file}`);
-    // alfy.log(`[info] Using file: ${file}`);
+    const files = getProjectFilePath();
+    // console.log(`[info] Using files: ${files}`);
+    // alfy.log(`[info] Using files: ${files}`);
 
-    let projects = await fetch(file, {});
+    let projects = await fetch(files, {});
 
     if (alfy.input) {
       projects = inputMatchesData(projects, alfy.input, ['title', 'subtitle']);
